@@ -120,12 +120,3 @@ for img in images:
     results = model.predict(img, imgsz=1024, conf=0.25)
     cv2_imshow(results[0].plot())
 
-from google.colab.patches import cv2_imshow
-
-model = YOLO('/content/runs/detect/pcb_model2/weights/last.pt')
-images = ['/content/drive/MyDrive/Colab Notebooks/data_set/evaluation/rasppi.jpg'
-]
-for img in images:
-    print(f"\nResults for: {img.split('/')[-1]}")
-    results = model.predict(img, imgsz=1024, conf=0.25)
-    cv2_imshow(results[0].plot())
